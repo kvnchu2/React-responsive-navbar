@@ -1,5 +1,9 @@
 import React from "react";
 import './Home.css';
+import './root.css';
+import phone from '../../images/phone.svg';
+import phoneDark from '../../images/phone-dark.svg';
+import ryanCaselli from '../../images/ryan-caselli.png';
 
 export const Home = () => {
   return (
@@ -16,8 +20,8 @@ export const Home = () => {
                           About Us
                       </a>
                       <a class="call-now" href="tel:555-213-9120">
-                          <img class="light" decoding="async" src="../../images/phone.svg" alt="" aria-hidden="true" width="21" height="21"></img>
-                          <img class="dark" decoding="async" src="../../images/phone-dark.svg" alt="" aria-hidden="true" width="21" height="21"></img>
+                          <img class="light" decoding="async" src={phone} alt="" aria-hidden="true" width="21" height="21"></img>
+                          <img class="dark" decoding="async" src={phoneDark} alt="" aria-hidden="true" width="21" height="21"></img>
                           <div class="group">
                               <span class="text">Call Now</span>
                               <span class="number">(555) 213-9120</span>
@@ -25,7 +29,7 @@ export const Home = () => {
                       </a>
                   </div>
               </div>
-              <img decoding="async" src="../../images/ryan-caselli.png" alt="" class="business-casual" width="" height=""></img>
+              <img decoding="async" src={ryanCaselli} alt="" class="business-casual" width="" height=""></img>
           </div>
       </section>
 
