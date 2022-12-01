@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
+import logo from "../images/logo.svg";
+import logoWhite from "../images/logo-white.svg";
+import moon from "../images/moon.svg";
+import sun from "../images/sun.svg";
 
 function NavBar() {
   const [click, setClick] = useState(false);
@@ -8,64 +12,28 @@ function NavBar() {
   const handleClick = () => setClick(!click);
   return (
     <>
-      <nav className="navbar">
-        <div className="nav-container">
-          <NavLink exact to="/" className="nav-logo">
-            CodeBucks
-            <i className="fas fa-code"></i>
-          </NavLink>
-
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Home
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/about"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                About
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/blog"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Blog
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/contact"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Contact Us
-              </NavLink>
-            </li>
-          </ul>
-          <div className="nav-icon" onClick={handleClick}>
-            <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
-          </div>
-        </div>
-      </nav>
+      <nav>
+              <div class="navbar-menu">
+                  <div id="side-menu" class=" side-nav">
+                      <a class="nav-logo" href="/">
+                          <img class="light" aria-hidden="true" decoding="async" src={logo} alt="compnay logo" height="80"></img>
+                          <img class="dark" aria-hidden="true" decoding="async" src={logoWhite} alt="compnay logo" height="80"></img>
+                      </a>
+                      <ul id="on-top" class="navbar-links">
+                          <li class="nav-li"><a id="active-menu" href="/">Home</a></li>
+                          <li class="nav-li"><a id={click ? "about-clicked" : "about-unclicked"} class="link" href="/about" onClick={() => handleClick}>About</a></li>
+                          <li class="nav-li"><a class="link" href="index.html#services">Services</a></li>
+                          {/* <!-- <li class="nav-li"><a class="link" href="html/portfolio.html">Portfolio</a></li> --> */}
+                          <li class="nav-li"><a class="link" href="/testimonials.html">Testimonials</a></li>
+                          <li class="nav-li"><a class="link" href="/contact">Contact</a></li>
+                      </ul>
+                  </div>
+                  <button class="dark-mode-button top-dark-mode-button" aria-label="dark mode toggle">
+                      <img class="moon" aria-hidden="true" src={moon} alt="" width="24" height="24"></img>
+                      <img class="sun" aria-hidden="true" src={sun} alt="" width="24" height="24"></img>
+                  </button>
+              </div>
+        </nav>
     </>
   );
 }

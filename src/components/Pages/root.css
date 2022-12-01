@@ -602,17 +602,29 @@
     color: #fff;
     font-size: 0.9em;
   }
-  .side-nav ul li:hover a.link {
+  /* changes font to white from black */
+  /* .side-nav ul li:hover a.link {
     color: #fff;
-  }
-  .side-nav ul li:hover a.link:before {
+
+  } */
+  /* fills out the background with var(--primary) on hover */
+  /* .side-nav ul li:hover a.link:before {
     width: 100%;
     opacity: 1;
     transform: translateY(-50%) scaleX(1);
-  }
+
+  } */
+  /* styling for each anchor tag - has nothing to do with the hover */
   .side-nav a {
     padding: 0 1.38888889em;
     color: #000;
+    opacity: 1;
+
+    background: var(--primary);
+    color: #fff;
+    padding-top: 0.5em;
+    padding-bottom: 0.55em;
+
     -webkit-transition: .2s ease;
     -o-transition: .2s ease;
     transition: .2s ease;
@@ -621,6 +633,59 @@
     position: relative;
     font-weight: bold;
   }
+
+
+  #about-clicked {
+    padding: 0 1.38888889em;
+    /* color: #000; */
+    opacity: 1;
+
+    background: var(--primary);
+    color: #fff;
+    padding-top: 0.5em;
+    padding-bottom: 0.55em;
+
+    -webkit-transition: .2s ease;
+    -o-transition: .2s ease;
+    transition: .2s ease;
+    font-size: 1em;
+    text-transform: capitalize;
+    position: relative;
+    font-weight: bold;
+  }
+
+  #about-unclicked {
+    padding: 0 1.38888889em;
+    color: #000;
+    background: #FFF;
+    opacity: 1;
+    -webkit-transition: .2s ease;
+    -o-transition: .2s ease;
+    transition: .2s ease;
+    font-size: 1em;
+    text-transform: capitalize;
+    position: relative;
+    font-weight: bold;
+  }
+
+  /* changes font to white from black */
+  #about-unclicked:hover {
+    color: #fff;
+
+  }
+  /* fills out the background with var(--primary) on hover */
+  #about-unclicked:hover {
+    width: 100%;
+    opacity: 1;
+    transform: translateY(-50%) scaleX(1);
+    background: var(--primary);
+    padding-top: 0.5em;
+    padding-bottom: 0.55em;
+  }
+
+
+
+
   .side-nav a:before {
     cursor: pointer;
     -webkit-transition: .2s ease;
