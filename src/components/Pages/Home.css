@@ -130,7 +130,7 @@ main {
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
   #hero {
-    padding-top: 15em;
+    /* padding-top: 15em; */
     padding-bottom: 14em;
     background-attachment: fixed;
   }
